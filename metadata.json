@@ -1,0 +1,6 @@
+{
+  "name": "NND Family Mart",
+  "description": "NND Family Mart, Sitapur - A one-stop family shopping destination offering groceries, household essentials, personal care products, kitchen items, and more.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
