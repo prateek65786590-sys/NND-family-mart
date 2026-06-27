@@ -1,30 +1,29 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Categories } from './components/Categories';
-import { FeaturedProducts } from './components/FeaturedProducts';
-import { Offers } from './components/Offers';
+import { AboutUs } from './components/AboutUs';
+import { Programs } from './components/Programs';
+import { Membership } from './components/Membership';
 import { WhyChooseUs } from './components/WhyChooseUs';
-import { Testimonials } from './components/Testimonials';
+import { BMICalculator } from './components/BMICalculator';
+import { Transformations } from './components/Transformations';
 import { Gallery } from './components/Gallery';
+import { Testimonials } from './components/Testimonials';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { FloatingActions } from './components/FloatingActions';
 
 export default function App() {
   return (
-    <div className="min-h-screen font-sans">
+    <div className="min-h-screen font-sans bg-[#0B0B0B] text-gray-200">
       <Navbar />
       <main>
         <Hero />
-        <Categories />
-        <Offers />
-        <FeaturedProducts />
+        <AboutUs />
+        <Programs />
+        <Membership />
         <WhyChooseUs />
+        <BMICalculator />
+        <Transformations />
         <Gallery />
         <Testimonials />
         <Contact />
@@ -34,4 +33,3 @@ export default function App() {
     </div>
   );
 }
-

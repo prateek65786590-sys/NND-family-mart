@@ -1,6 +1,6 @@
 {
-  "name": "NND Family Mart",
-  "description": "NND Family Mart, Sitapur - A one-stop family shopping destination offering groceries, household essentials, personal care products, kitchen items, and more.",
+  "name": "Veer The Muscle Academy Gym",
+  "description": "Veer The Muscle Academy Gym, Sitapur - Elite fitness center, premium equipment, and expert trainers.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

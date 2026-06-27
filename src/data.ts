@@ -1,20 +1,8 @@
-export interface Category {
+export interface Program {
   id: string;
   name: string;
   image: string;
-  color: string;
-}
-
-export interface Product {
-  id: string;
-  name: string;
-  price: number;
-  originalPrice?: number;
-  image: string;
-  category: string;
-  badge?: string;
-  rating: number;
-  reviews: number;
+  description: string;
 }
 
 export interface Testimonial {
@@ -26,136 +14,93 @@ export interface Testimonial {
   avatar: string;
 }
 
-export const CATEGORIES: Category[] = [
-  { id: 'grocery', name: 'Grocery & Staples', image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80&w=400', color: 'bg-emerald-100 text-emerald-800' },
-  { id: 'fresh', name: 'Fresh Fruits & Veggies', image: 'https://images.unsplash.com/photo-1610832958506-aa56368176cf?auto=format&fit=crop&q=80&w=400', color: 'bg-orange-100 text-orange-800' },
-  { id: 'dairy', name: 'Dairy & Bakery', image: 'https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=400', color: 'bg-blue-100 text-blue-800' },
-  { id: 'beverages', name: 'Beverages', image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&q=80&w=400', color: 'bg-red-100 text-red-800' },
-  { id: 'snacks', name: 'Snacks & Branded Foods', image: 'https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&q=80&w=400', color: 'bg-yellow-100 text-yellow-800' },
-  { id: 'household', name: 'Household Essentials', image: 'https://images.unsplash.com/photo-1583947215259-38e31be8751f?auto=format&fit=crop&q=80&w=400', color: 'bg-purple-100 text-purple-800' },
-  { id: 'personal-care', name: 'Personal Care', image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?auto=format&fit=crop&q=80&w=400', color: 'bg-pink-100 text-pink-800' },
-  { id: 'home-kitchen', name: 'Home & Kitchen', image: 'https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&q=80&w=400', color: 'bg-teal-100 text-teal-800' },
+export interface PricingPlan {
+  id: string;
+  name: string;
+  price: string;
+  duration: string;
+  features: string[];
+  recommended?: boolean;
+}
+
+export const PROGRAMS: Program[] = [
+  { id: 'muscle', name: 'Muscle Building', description: 'Hypertrophy-focused training for maximum muscle growth and strength.', image: 'https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&q=80&w=600' },
+  { id: 'weight-loss', name: 'Weight Loss', description: 'High-intensity workouts designed to burn fat and improve cardiovascular health.', image: 'https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&q=80&w=600' },
+  { id: 'strength', name: 'Strength Training', description: 'Powerlifting and functional strength exercises to build raw power.', image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&q=80&w=600' },
+  { id: 'functional', name: 'Functional Training', description: 'Improve your everyday movement patterns and overall athletic performance.', image: 'https://images.unsplash.com/photo-1434596922112-19c563067271?auto=format&fit=crop&q=80&w=600' },
+  { id: 'cardio', name: 'Cardio Fitness', description: 'Endurance building sessions utilizing premium cardio equipment.', image: 'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?auto=format&fit=crop&q=80&w=600' },
+  { id: 'personal', name: 'Personal Training', description: '1-on-1 expert guidance tailored to your specific fitness goals.', image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&q=80&w=600' },
+  { id: 'beginner', name: 'Beginner Fitness', description: 'A safe and structured introduction to gym equipment and exercises.', image: 'https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=600' },
+  { id: 'womens', name: 'Women\'s Fitness', description: 'Empowering fitness programs designed specifically for women.', image: 'https://images.unsplash.com/photo-1574680096145-d05b474e2155?auto=format&fit=crop&q=80&w=600' }
 ];
 
-export const FEATURED_PRODUCTS: Product[] = [
+export const PLANS: PricingPlan[] = [
   {
-    id: 'p1',
-    name: 'Aashirvaad Superior MP Sharbati Atta, 5kg',
-    price: 245,
-    originalPrice: 280,
-    image: 'https://images.unsplash.com/photo-1627485937980-221c88ce04ea?auto=format&fit=crop&q=80&w=400', // Placeholder
-    category: 'Grocery',
-    badge: '12% OFF',
-    rating: 4.8,
-    reviews: 124
+    id: 'monthly',
+    name: 'Monthly Plan',
+    price: '₹1,500',
+    duration: '1 Month',
+    features: ['Access to all equipment', 'Cardio & Strength Area', 'Locker Room Access', 'Free Diet Consultation']
   },
   {
-    id: 'p2',
-    name: 'Fortune Sunlite Refined Sunflower Oil, 1L',
-    price: 135,
-    originalPrice: 155,
-    image: 'https://images.unsplash.com/photo-1620706857370-e1b9770e8bb1?auto=format&fit=crop&q=80&w=400', // Placeholder
-    category: 'Grocery',
-    badge: 'Best Seller',
-    rating: 4.6,
-    reviews: 89
+    id: 'quarterly',
+    name: 'Quarterly Plan',
+    price: '₹4,000',
+    duration: '3 Months',
+    features: ['Access to all equipment', 'Cardio & Strength Area', 'Locker Room Access', '1 Free Personal Training Session', 'Custom Diet Plan'],
+    recommended: true
   },
   {
-    id: 'p3',
-    name: 'Fresh Red Apple (Washington), 1kg',
-    price: 180,
-    originalPrice: 220,
-    image: 'https://images.unsplash.com/photo-1560806887-1e4cd0b6fac6?auto=format&fit=crop&q=80&w=400',
-    category: 'Fresh Fruits',
-    badge: '18% OFF',
-    rating: 4.9,
-    reviews: 56
+    id: 'half-yearly',
+    name: 'Half-Yearly Plan',
+    price: '₹7,000',
+    duration: '6 Months',
+    features: ['Access to all equipment', 'Cardio & Strength Area', 'Locker Room Access', '3 Free PT Sessions', 'Custom Diet & Workout Plan', 'Free Gym Merchandise']
   },
   {
-    id: 'p4',
-    name: 'Amul Taaza Homogenised Toned Milk, 1L',
-    price: 72,
-    image: 'https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=400',
-    category: 'Dairy',
-    rating: 4.7,
-    reviews: 210
-  },
-  {
-    id: 'p5',
-    name: 'Surf Excel Easy Wash Detergent Powder, 1.5kg',
-    price: 185,
-    originalPrice: 200,
-    image: 'https://images.unsplash.com/photo-1585241936939-f8319f6be2b2?auto=format&fit=crop&q=80&w=400',
-    category: 'Household',
-    rating: 4.5,
-    reviews: 312
-  },
-  {
-    id: 'p6',
-    name: 'Maggi 2-Minute Instant Noodles, 140g',
-    price: 28,
-    image: 'https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&q=80&w=400',
-    category: 'Snacks',
-    badge: 'Popular',
-    rating: 4.8,
-    reviews: 540
-  },
-  {
-    id: 'p7',
-    name: 'Lays Potato Chips - India\'s Magic Masala, 50g',
-    price: 20,
-    image: 'https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&q=80&w=400',
-    category: 'Snacks',
-    rating: 4.6,
-    reviews: 198
-  },
-  {
-    id: 'p8',
-    name: 'Dettol Original Liquid Handwash Refill, 750ml',
-    price: 115,
-    originalPrice: 125,
-    image: 'https://images.unsplash.com/photo-1584824486509-112e4181ff6b?auto=format&fit=crop&q=80&w=400',
-    category: 'Personal Care',
-    rating: 4.7,
-    reviews: 421
+    id: 'annual',
+    name: 'Annual Plan',
+    price: '₹12,000',
+    duration: '12 Months',
+    features: ['Access to all equipment', 'Cardio & Strength Area', 'Locker Room Access', '5 Free PT Sessions', 'Custom Diet & Workout Plan', 'Premium Gym Kit', 'Freeze Option Available']
   }
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
   {
     id: 't1',
-    author: 'Rajesh Kumar',
+    author: 'Vikram Singh',
     rating: 5,
-    text: 'Best supermarket in Sitapur! They have everything you need for the family. The staff is very polite and helpful. Prices are also very reasonable compared to local shops.',
+    text: 'Best gym in Sitapur! The equipment is top-notch, and the trainers are incredibly knowledgeable. Ive seen amazing results in just 3 months.',
     date: '2 weeks ago',
-    avatar: 'https://ui-avatars.com/api/?name=Rajesh+Kumar&background=16a34a&color=fff'
+    avatar: 'https://ui-avatars.com/api/?name=Vikram+Singh&background=D4AF37&color=000'
   },
   {
     id: 't2',
-    author: 'Sunita Mishra',
+    author: 'Neha Sharma',
     rating: 5,
-    text: 'Very clean and well-organized store. I can find all my grocery and household items easily. They always have good offers running. Highly recommended for daily needs.',
+    text: 'A very safe and professional environment. The trainers give personal attention even during general workouts. Highly recommended for women.',
     date: '1 month ago',
-    avatar: 'https://ui-avatars.com/api/?name=Sunita+Mishra&background=f97316&color=fff'
+    avatar: 'https://ui-avatars.com/api/?name=Neha+Sharma&background=2563EB&color=fff'
   },
   {
     id: 't3',
-    author: 'Amit Verma',
-    rating: 4,
-    text: 'Great variety of products. The vegetables are always fresh and billing is quite fast. Parking is also available which is a big plus.',
+    author: 'Rahul Verma',
+    rating: 5,
+    text: 'Premium vibe, great music, and serious lifters. If you want to build muscle and need a hardcore yet clean gym, this is the place.',
     date: '2 months ago',
-    avatar: 'https://ui-avatars.com/api/?name=Amit+Verma&background=1e3a8a&color=fff'
+    avatar: 'https://ui-avatars.com/api/?name=Rahul+Verma&background=1C1C1C&color=fff'
   }
 ];
 
 export const STORE_INFO = {
-  name: 'NND Family Mart',
-  address: 'NND Family Mart, Near Eye Hospital, Sitapur, Uttar Pradesh 261001',
+  name: 'Veer The Muscle Academy Gym',
+  address: 'Veer The Muscle Academy Gym, Sitapur, Uttar Pradesh 261001',
   phone: '+91 98765 43210',
   whatsapp: '+91 98765 43210',
-  hours: 'Mon - Sun: 8:00 AM - 10:00 PM',
+  hours: 'Mon - Sat: 5:00 AM - 10:00 PM | Sun: Closed',
   mapUrl: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14197.669862276537!2d80.66978695!3d27.56653245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3998c761b65b6ad1%3A0xc64fb4c063cfce4d!2sSitapur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1709210000000!5m2!1sen!2sin',
-  googleMapsLink: 'https://maps.google.com/?q=Sitapur,Uttar+Pradesh', // Generic link, since we don't have the exact Maps CID
-  rating: 4.8,
-  reviewCount: 342,
+  googleMapsLink: 'https://maps.google.com/?q=Sitapur,Uttar+Pradesh',
+  rating: 4.9,
+  reviewCount: 128,
 };

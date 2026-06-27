@@ -3,32 +3,29 @@ import { STORE_INFO } from '../data';
 
 export function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 py-16 border-t border-gray-800">
+    <footer className="bg-[#0B0B0B] text-gray-400 py-20 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* Brand */}
           <div className="col-span-1 md:col-span-2 lg:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                NND
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-xl leading-tight text-white">Family Mart</span>
-                <span className="text-[10px] text-emerald-400 font-semibold uppercase tracking-wider">Sitapur</span>
-              </div>
-            </a>
-            <p className="text-sm text-gray-400 mb-6 leading-relaxed">
-              Sitapur's most trusted supermarket. Providing premium quality groceries, fresh produce, and household essentials at the best prices.
+             <a href="#" className="flex items-center gap-2 mb-8 group">
+                <div className="flex flex-col items-start">
+                  <span className="font-heading font-bold text-3xl leading-none text-white tracking-wider group-hover:text-[#D4AF37] transition-colors">VEER</span>
+                  <span className="text-[9px] text-[#D4AF37] font-semibold uppercase tracking-[0.2em] -mt-1">Muscle Academy</span>
+                </div>
+              </a>
+            <p className="text-sm font-light leading-relaxed mb-8">
+              Sitapur's most elite fitness destination. Build strength, build discipline, and become unstoppable with our expert trainers and premium equipment.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors">
+              <a href="#" className="w-10 h-10 bg-[#1C1C1C] border border-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-colors text-white">
                 <Facebook size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors">
+              <a href="#" className="w-10 h-10 bg-[#1C1C1C] border border-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-colors text-white">
                 <Instagram size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-emerald-600 hover:text-white transition-colors">
+              <a href="#" className="w-10 h-10 bg-[#1C1C1C] border border-white/10 flex items-center justify-center hover:bg-[#D4AF37] hover:text-black hover:border-[#D4AF37] transition-colors text-white">
                 <Twitter size={18} />
               </a>
             </div>
@@ -36,53 +33,51 @@ export function Footer() {
           
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Quick Links</h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="#about" className="hover:text-emerald-400 transition-colors">About Us</a></li>
-              <li><a href="#categories" className="hover:text-emerald-400 transition-colors">Shop by Category</a></li>
-              <li><a href="#offers" className="hover:text-emerald-400 transition-colors">Latest Offers</a></li>
-              <li><a href="#contact" className="hover:text-emerald-400 transition-colors">Store Locator</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Terms of Service</a></li>
+            <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-sm">Links</h4>
+            <ul className="space-y-4 text-sm font-light">
+              <li><a href="#about" className="hover:text-[#D4AF37] transition-colors">About Us</a></li>
+              <li><a href="#programs" className="hover:text-[#D4AF37] transition-colors">Programs</a></li>
+              <li><a href="#membership" className="hover:text-[#D4AF37] transition-colors">Membership Plans</a></li>
+              <li><a href="#gallery" className="hover:text-[#D4AF37] transition-colors">Gallery</a></li>
+              <li><a href="#contact" className="hover:text-[#D4AF37] transition-colors">Contact</a></li>
             </ul>
           </div>
           
-          {/* Categories */}
+          {/* Programs */}
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Top Categories</h4>
-            <ul className="space-y-3 text-sm">
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Fresh Fruits & Veggies</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Grocery & Staples</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Dairy & Bakery</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Household Essentials</a></li>
-              <li><a href="#" className="hover:text-emerald-400 transition-colors">Personal Care</a></li>
+            <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-sm">Programs</h4>
+            <ul className="space-y-4 text-sm font-light">
+              <li><a href="#programs" className="hover:text-[#D4AF37] transition-colors">Muscle Building</a></li>
+              <li><a href="#programs" className="hover:text-[#D4AF37] transition-colors">Weight Loss</a></li>
+              <li><a href="#programs" className="hover:text-[#D4AF37] transition-colors">Strength Training</a></li>
+              <li><a href="#programs" className="hover:text-[#D4AF37] transition-colors">Personal Training</a></li>
             </ul>
           </div>
           
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-wider text-sm">Contact Us</h4>
-            <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3">
-                <MapPin size={18} className="text-emerald-400 flex-shrink-0 mt-0.5" />
+            <h4 className="text-white font-bold mb-8 uppercase tracking-widest text-sm">Contact</h4>
+            <ul className="space-y-6 text-sm font-light">
+              <li className="flex items-start gap-4">
+                <MapPin size={18} className="text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <span className="leading-relaxed">{STORE_INFO.address}</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Phone size={18} className="text-emerald-400 flex-shrink-0" />
+              <li className="flex items-center gap-4">
+                <Phone size={18} className="text-[#D4AF37] flex-shrink-0" />
                 <span>{STORE_INFO.phone}</span>
               </li>
-              <li className="flex items-center gap-3">
-                <Mail size={18} className="text-emerald-400 flex-shrink-0" />
-                <span>support@nndfamilymart.com</span>
+              <li className="flex items-center gap-4">
+                <Mail size={18} className="text-[#D4AF37] flex-shrink-0" />
+                <span>info@veermuscleacademy.com</span>
               </li>
             </ul>
           </div>
           
         </div>
         
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
-          <p>&copy; {new Date().getFullYear()} NND Family Mart, Sitapur. All rights reserved.</p>
-          <p>Designed for a premium shopping experience.</p>
+        <div className="border-t border-white/10 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs font-light uppercase tracking-widest">
+          <p>&copy; {new Date().getFullYear()} Veer The Muscle Academy Gym. All rights reserved.</p>
+          <p>Built for the Elite.</p>
         </div>
       </div>
     </footer>

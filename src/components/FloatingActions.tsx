@@ -13,11 +13,11 @@ export function FloatingActions() {
         href={STORE_INFO.googleMapsLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-blue-600/30 hover:bg-blue-700 hover:scale-110 transition-all cursor-pointer group relative"
+        className="w-12 h-12 bg-[#1C1C1C] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center shadow-lg hover:bg-[#D4AF37] hover:text-black transition-all cursor-pointer group relative"
       >
-        <MapPin size={22} />
-        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-xs font-semibold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
-          Get Directions
+        <MapPin size={20} />
+        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] uppercase tracking-wider font-bold py-2 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+          Directions
         </div>
       </motion.a>
       
@@ -26,10 +26,10 @@ export function FloatingActions() {
         animate={{ opacity: 1, scale: 1, x: 0 }}
         transition={{ delay: 1.1 }}
         href={`tel:${STORE_INFO.phone.replace(/\s+/g, '')}`}
-        className="w-12 h-12 bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-lg shadow-emerald-600/30 hover:bg-emerald-700 hover:scale-110 transition-all cursor-pointer group relative"
+        className="w-12 h-12 bg-[#1C1C1C] border border-[#D4AF37]/30 text-[#D4AF37] flex items-center justify-center shadow-lg hover:bg-[#D4AF37] hover:text-black transition-all cursor-pointer group relative"
       >
-        <PhoneCall size={22} />
-        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-xs font-semibold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        <PhoneCall size={20} />
+        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-[#D4AF37] text-black text-[10px] uppercase tracking-wider font-bold py-2 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
           Call Now
         </div>
       </motion.a>
@@ -41,10 +41,10 @@ export function FloatingActions() {
         href={`https://wa.me/${STORE_INFO.whatsapp.replace(/\D/g, '')}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-xl shadow-green-500/40 hover:bg-green-600 hover:scale-110 transition-all cursor-pointer group relative"
+        className="w-14 h-14 bg-green-500 text-white flex items-center justify-center shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:bg-green-400 hover:scale-105 transition-all cursor-pointer group relative"
       >
         <MessageCircle size={28} />
-        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-gray-900 text-white text-xs font-semibold py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
+        <div className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-green-500 text-white text-[10px] uppercase tracking-wider font-bold py-2 px-3 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap">
           WhatsApp Us
         </div>
       </motion.a>
